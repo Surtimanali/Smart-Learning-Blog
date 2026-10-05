@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #243b55;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #ffd166;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #243b55, #4b79a1);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #ffb703;
+    color: #222;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #fb8500;
+    color: white;
+}
+
+/* Blogs */
+.blogs {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.blogs h2,
+.about h2,
+.contact h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #243b55;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.blog-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.blog-card h3 {
+    margin: 15px 0;
+    color: #243b55;
+}
+
+.blog-card p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.category {
+    background-color: #e9f5ff;
+    color: #0077b6;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* About */
+.about {
+    padding: 60px 15%;
+    background-color: white;
+    text-align: center;
+}
+
+.about p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* Contact */
+.contact {
+    padding: 60px 15%;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+#formMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: white;
+    width: 80%;
+    max-width: 650px;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modal-content h2 {
+    color: #243b55;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    line-height: 1.7;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #243b55;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about,
+    .contact {
+        padding: 50px 8%;
+    }
+}
